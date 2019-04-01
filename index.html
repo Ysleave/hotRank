@@ -5,22 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    /* .tp1{
+        display: none;
+    } */
+    .cleanF:after{
+        content: '';
+        display: block;
+        clear: both;
+        overflow: hidden;
+    }
+    .wrapper{
+        width: 350px;
+        border: 1px solid #ccc;
+        margin: 100px auto 0px;
+        padding: 10px 5px;
+    }
+    .wrapper .headSection{
+        margin-bottom: 10px;
+    }
+    .headSection .hot{
+        font-size:18px;
+        font-weight: bold;
+        float: left;
+    }
+    .headSection .change{
+        float: right;
+        color: #08f;
+        cursor: pointer;
+    }
+    .wrapper .showSection .number{
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          color: #ccc;
+          background: #08f; 
+          text-align: center;
+          float: left;
+    }
+    .wrapper .showSection .mes{
+        float: right;
+    }
+    .wrapper .showSection .mes::after{
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-size: 100% 100%;
+    
+    }
+    .wrapper .showSection .mes.up::after{
+        background-image: url('./img/up.png');
+        background-position-y: 7px;
+    }
+    .wrapper .showSection .mes.down::after{
+        background-image: url('./img/down.png');
+        background-position-y: 3px;
+    }
+
+    
+    
+    
+    </style>
 </head>
 <body>
     <div class="wrapper">
-        <div class="headSection">
+        <div class="headSection cleanF">
             <span class="hot">热点搜索</span>
             <span class="change">换一换</span>
         </div>
-        <ul class="showSection">
+        <ul class="showSection cleanF">
            <li class="tp1">
                <span class="number">1</span>
                <span class="title">金星</span>
-               <span class="mes">22222</span>
+               <span class="mes down">22222</span>
            </li>
         </ul>
     </div>
-    <script src=""></script>
+    <script src="./jquery.min.js"></script>
     <script>
     
     
